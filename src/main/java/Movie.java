@@ -12,7 +12,7 @@ public class Movie {
     /**
      * @uml.property  name="_price"
      */
-    private Price _price;
+    Price _price;
 
     public Movie(String title, int priceCode) {
         _title = title;
@@ -39,28 +39,12 @@ public class Movie {
         }
     }
 
-    public String getTitle() {
-        return _title;
+    public double getCharge(int daysRented) {
+        return _price.getCharge(daysRented);
     }
 
-    public double getCharge(int daysRented) {
-        double relust = 0;
-        switch(getPriceCode()) {
-            case Movie.REGULAR:
-                relust += 2;
-                if (daysRented > 2)
-                    relust += (daysRented - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                relust += daysRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                relust += 1.5;
-                if (daysRented > 3)
-                    relust += (daysRented - 3) * 1.5;
-                break;
-        }
-        return relust;
+    public String getTitle() {
+        return _title;
     }
 
     public int getFrequentRenterPoints(int daysRented) {
