@@ -32,6 +32,8 @@ public class Customer {
         while(rentals.hasMoreElements()) {
             double thisAmount = 0;
             Rental each = (Rental)rentals.nextElement();
+
+            //determine amounts for each line
             thisAmount = amountFor(each);
 
 
@@ -56,7 +58,6 @@ public class Customer {
 
     private double amountFor(Rental each) {
         double thisAmount = 0;
-        //determine amounts for each line
         switch(each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
                 thisAmount += 2;
