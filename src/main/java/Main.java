@@ -9,7 +9,10 @@ public class Main {
 
         Customer customer = new Customer("Jack");
         Rental rental = new Rental(childrens,5);
+        Rental rental1 = new Rental(new_release,3);
+
         customer.addRental(rental);
+        customer.addRental(rental1);
         System.out.println(customer.statement());
     }
 }
