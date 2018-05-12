@@ -3,7 +3,7 @@
 /**
  * @see Movie#CHILDRENS
  */
-public class Childrens extends PriceCode {
+public class ChildrensPrice extends Price {
 	public int getPriceCode() {
 		return Movie.CHILDRENS;
 	}

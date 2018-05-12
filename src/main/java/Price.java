@@ -1,5 +1,5 @@
 
 
-public abstract class PriceCode {
+public abstract class Price {
 	public abstract int getPriceCode();
 }
