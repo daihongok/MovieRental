@@ -34,7 +34,7 @@ public class Customer {
             Rental each = (Rental)rentals.nextElement();
 
             //determine amounts for each line
-            thisAmount = each.amountFor();
+            thisAmount = each.getCharge();
 
 
             //add frequent renter points
